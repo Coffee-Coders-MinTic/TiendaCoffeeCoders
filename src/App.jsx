@@ -17,7 +17,7 @@ function App() {
     <Auth0Provider
       domain="coffeecoders-mintic.us.auth0.com"
       clientId="edxTN4GxPbyqKvscYNUQgWamqbtkHUaa"
-      redirectUri="http://localhost:3000/GestionUsuarios"
+      redirectUri="https://git.heroku.com/thawing-badlands-49574.git/Login"
     >
       <Router>
          <Switch>

@@ -8,10 +8,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Sidebar = () => {
   const { user, logout } = useAuth0();
 
-  const cerrarSesion = () => {
-    logout({ returnTo: 'https://localhost:3000/Login' });
-    localStorage.setItem('token', null);
-  };
+  const cerrarSesion=()=>{
+    logout({ returnTo: window.location.origin })
+    localStorage.setItem('token',null)
+  }
 
   return (
     <nav className='hidden lg:flex lg:w-72 border border-gray-300 h-full flex-col bg-gray-100 p-4 sidebar'>
@@ -30,13 +30,10 @@ const Sidebar = () => {
           <Ruta icono='' ruta='/GestionProductos' nombre='Productos' />
           {/* <Ruta icono='' ruta='/Login' nombre='Login' /> */}
         </div>
-        <button
-          onClick={() => logout({ returnTo: window.location.origin })}
-          className='bg-indigo-500 p-1 text-white rounded-md shadow-md hover:bg-red-400'
-        >
-          Cerrar Sesión
+        <button onClick={() => cerrarSesion() } className='bg-indigo-500 p-1 text-white rounded-md shadow-md hover:bg-red-400'>
+        Cerrar Sesión
         </button>
-      </nav>
+    </nav>
   );
 };
 

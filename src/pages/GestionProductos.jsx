@@ -272,7 +272,7 @@ const FilaProducto = ({productos, setConsulta, getToken}) => {
     const actualizarProducto = async ()=>{
         const options = {
             method: 'PATCH',
-            url: `https://git.heroku.com/still-shelf-57648.git/usuarios/${productos._id}`,
+            url: `https://git.heroku.com/still-shelf-57648.git/productos/${productos._id}`,
             headers: {'Content-Type': 'application/json', Authorization: getToken()},
             data: { ...infoEditarProducto },
         };

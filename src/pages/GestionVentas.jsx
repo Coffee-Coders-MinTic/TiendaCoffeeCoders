@@ -2,7 +2,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'styles/EstiloGestionVentas.css';
 import React, { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCheck, faUserEdit } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faEdit } from '@fortawesome/free-solid-svg-icons';
 import IconoVentas from 'media/IconoVentas.png';
 import { ToastContainer, toast } from 'react-toastify';
 import { nanoid } from 'nanoid';
@@ -350,9 +350,9 @@ const FilaVentas = ({ventas, setConsulta, getToken})=>{
         <td>
             <div className='flex items-center justify-center'>
             {editar ? (
-                <FontAwesomeIcon onClick={()=>actualizarVentas() } icon={faUserCheck} className='text-green-400 hover:text-yellow-900' />
+                <FontAwesomeIcon onClick={()=>actualizarVentas() } icon={faCheck} className='text-green-400 hover:text-yellow-900' />
             ):(
-                <FontAwesomeIcon onClick={()=>setEditar(!editar)} icon={faUserEdit} className='text-green-400 hover:text-yellow-900' />
+                <FontAwesomeIcon onClick={()=>setEditar(!editar)} icon={faEdit} className='text-green-400 hover:text-yellow-900' />
             )} 
             </div>
         </td>

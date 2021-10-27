@@ -95,7 +95,7 @@ const RegistroVentas=({setMostrarTabla, listaVentas, setVentas, getToken})=>{
                 method: 'POST',
                 url: 'https://git.heroku.com/still-shelf-57648.git/ventas/',
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
-                data: { iD: nuevaVenta.iD, total: nuevaVenta.total, descripcion: nuevaVenta.descripcion, fechaPago: nuevaVenta.fechaPago, fechaFutura: nuevaVenta.fechaFutura, vendedor: nuevaVenta.vendedor},
+                data: { iD: nuevaVenta.iD, total: nuevaVenta.total, cantidad: nuevaVenta.cantidad, preciounitario: nuevaVenta.preciounitario, fechaventa: nuevaVenta.fechaventa, vendedor: nuevaVenta.vendedor, identificacioncliente: nuevaVenta.identificacioncliente, nombrecliente: nuevaVenta.nombrecliente, estadoventa: nuevaVenta.estadoventa},
                 };
                   
             await axios
